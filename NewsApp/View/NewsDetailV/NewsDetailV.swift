@@ -10,7 +10,7 @@ import SwiftUI
 
 struct NewsDetailV : View {
     
-    let artical: Artical
+    let article: Article
     
     private let imageWidth: CGFloat = (UIDevice.screenWidth-30.0)
     
@@ -20,26 +20,26 @@ struct NewsDetailV : View {
                     .frame(width: imageWidth, height: imageWidth * 0.5, alignment: Alignment.center)
                     .scaledToFill()
                 
-                Text(verbatim: artical.title)
+                Text(verbatim: article.title)
                     .lineLimit(nil)
                     .font(.headline)
                 
                 HStack {
                     Image(uiImage: #imageLiteral(resourceName: "ic_publish"))
                         .frame(width: 20.0, height: 20.0, alignment: Alignment.center)
-                    Text(artical.publishDate?.toString(dateFormat: "d MMM, yyyy") ?? defaultText)
+                    Text(article.publishDate?.toString(dateFormat: "d MMM, yyyy") ?? defaultText)
                         .font(.system(size: 12.0))
                     
                     Spacer()
                     
                     Image(uiImage: #imageLiteral(resourceName: "ic_author"))
                         .frame(width: 20.0, height: 20.0, alignment: Alignment.center)
-                    Text(artical.sourceName)
+                    Text(article.sourceName)
                         .font(.system(size: 12.0))
                 }
                 .padding(EdgeInsets(top: 0.0, leading: 16.0, bottom: 0.0, trailing: 16.0))
                 
-                Text(artical.description)
+                Text(article.description)
                     .lineLimit(nil)
                     .font(.subheadline)
                     .padding(.top, 16.0)
@@ -53,7 +53,7 @@ struct NewsDetailV : View {
 #if DEBUG
 struct NewsDetailV_Previews : PreviewProvider {
     static var previews: some View {
-        NewsDetailV(artical: Artical.getDefault())
+        NewsDetailV(article: Article.getDefault())
     }
 }
 #endif

@@ -11,16 +11,16 @@ extension APICaller {
 
     ///Getting list of coTenant form backend server with pagination
     func callGetAllNewsAPI(param: JsonDictionary,
-                              callBack: @escaping(_ success: Bool, _ message: String, _ list:[Artical])->()) {
+                              callBack: @escaping(_ success: Bool, _ message: String, _ list:[Article])->()) {
         
         self.helperJSON.callAPI(url: EndPoint.everything.url, params: param, method: .GET, requestType: .Raw) { (responseAny, error, headerResponse) in
             
             
             self.handleResponse(responseAny, err: error, header: headerResponse) { (success, jsonData, message) in
                 
-                var list: [Artical] = []
+                var list: [Article] = []
                 if success, let json = jsonData, let articals = json["articles"] as? [JsonDictionary] {
-                    list = Artical.getModels(json: articals)
+                    list = Article.getModels(json: articals)
                 }
                 callBack(success, error?.localizedDescription ?? "", list)
             }

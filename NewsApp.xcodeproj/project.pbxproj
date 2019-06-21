@@ -14,7 +14,7 @@
 		84DD372A22B3BA69003EFC43 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DD372922B3BA69003EFC43 /* Preview Assets.xcassets */; };
 		84DD376222B3BB0B003EFC43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD373522B3BB0B003EFC43 /* AppDelegate.swift */; };
 		84DD376322B3BB0B003EFC43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD373622B3BB0B003EFC43 /* SceneDelegate.swift */; };
-		84DD376422B3BB0B003EFC43 /* Artical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD373822B3BB0B003EFC43 /* Artical.swift */; };
+		84DD376422B3BB0B003EFC43 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD373822B3BB0B003EFC43 /* Article.swift */; };
 		84DD376522B3BB0B003EFC43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DD373A22B3BB0B003EFC43 /* Assets.xcassets */; };
 		84DD376622B3BB0B003EFC43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DD373B22B3BB0B003EFC43 /* LaunchScreen.storyboard */; };
 		84DD376822B3BB0B003EFC43 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD374022B3BB0B003EFC43 /* UIButtonExtension.swift */; };
@@ -61,7 +61,7 @@
 		84DD372922B3BA69003EFC43 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		84DD373522B3BB0B003EFC43 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84DD373622B3BB0B003EFC43 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		84DD373822B3BB0B003EFC43 /* Artical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artical.swift; sourceTree = "<group>"; };
+		84DD373822B3BB0B003EFC43 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		84DD373A22B3BB0B003EFC43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84DD373C22B3BB0B003EFC43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84DD374022B3BB0B003EFC43 /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
@@ -177,7 +177,7 @@
 		84DD373722B3BB0B003EFC43 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				84DD373822B3BB0B003EFC43 /* Artical.swift */,
+				84DD373822B3BB0B003EFC43 /* Article.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -383,7 +383,7 @@
 				84DD376322B3BB0B003EFC43 /* SceneDelegate.swift in Sources */,
 				84DD377222B3BB0B003EFC43 /* UIViewControllerExtension.swift in Sources */,
 				84DD377522B3BB0B003EFC43 /* Extensions.swift in Sources */,
-				84DD376422B3BB0B003EFC43 /* Artical.swift in Sources */,
+				84DD376422B3BB0B003EFC43 /* Article.swift in Sources */,
 				84DD376A22B3BB0B003EFC43 /* UIColorExtension.swift in Sources */,
 				84DD377A22B3BB0B003EFC43 /* DispatchQueueExtension.swift in Sources */,
 				84D412AB22B425E900328A05 /* NewsImageV.swift in Sources */,

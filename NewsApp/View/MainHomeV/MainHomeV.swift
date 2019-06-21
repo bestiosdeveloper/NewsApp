@@ -22,8 +22,8 @@ struct MainHomeV : View {
                 SearchBarV(text: $searchQuery, placeholder: Text("Search"), onCommit: search)
                 ForEach(viewModel.articals.identified(by: \.self)) { artcl in
                     NavigationButton(
-                    destination: NewsDetailV(artical: artcl)) {
-                        NewsRowV(artical: artcl)
+                    destination: NewsDetailV(article: artcl)) {
+                        NewsRowV(article: artcl)
                     }
                 }
                 }.navigationBarTitle(Text(todayStr))

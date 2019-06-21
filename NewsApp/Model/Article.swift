@@ -9,7 +9,7 @@ import Foundation
 
 let defaultText: String = "N/A"
 
-struct Artical: Hashable {
+struct Article: Hashable {
     
     var sourceId: String = defaultText
     var sourceName: String  = defaultText
@@ -22,62 +22,38 @@ struct Artical: Hashable {
     var publishedAt: String = defaultText
     var content: String = defaultText
     
-    var publishDate: Date? {
-        //"2019-06-07T10:37:36Z"
-        return self.publishedAt.toDate(dateFormat: "yyyy-MM-dd'T'HH:mm:ssZ")
-    }
+    //"2019-06-07T10:37:36Z"
+    var publishDate: Date? {return self.publishedAt.toDate(dateFormat: "yyyy-MM-dd'T'HH:mm:ssZ")}
     
-    var imageUrl: URL? {
-        return URL(string: urlToImage)
-    }
+    var imageUrl: URL? {return URL(string: urlToImage)}
     
     
     init(json: JsonDictionary) {
         
         if let source = json["source"] as? JsonDictionary {
-            if let obj = source["id"] {
-                self.sourceId = "\(obj)"
-            }
-            
-            if let obj = source["name"] {
-                self.sourceName = "\(obj)"
-            }
+            if let obj = source["id"] {self.sourceId = "\(obj)"}
+            if let obj = source["name"] {self.sourceName = "\(obj)"}
         }
+        if let obj = json["author"] {self.author = "\(obj)"}
         
-        if let obj = json["author"] {
-            self.author = "\(obj)"
-        }
+        if let obj = json["title"] {self.title = "\(obj)"}
         
-        if let obj = json["title"] {
-            self.title = "\(obj)"
-        }
+        if let obj = json["description"] {self.description = "\(obj)"}
         
-        if let obj = json["description"] {
-            self.description = "\(obj)"
-        }
+        if let obj = json["url"] {self.url = "\(obj)"}
         
-        if let obj = json["url"] {
-            self.url = "\(obj)"
-        }
+        if let obj = json["urlToImage"] {self.urlToImage = "\(obj)"}
         
-        if let obj = json["urlToImage"] {
-            self.urlToImage = "\(obj)"
-        }
+        if let obj = json["publishedAt"] {self.publishedAt = "\(obj)"}
         
-        if let obj = json["publishedAt"] {
-            self.publishedAt = "\(obj)"
-        }
-        
-        if let obj = json["content"] {
-            self.content = "\(obj)"
-        }
+        if let obj = json["content"] {self.content = "\(obj)"}
     }
     
-    static func getModels(json: [JsonDictionary]) -> [Artical] {
-        return json.map { Artical(json: $0) }
+    static func getModels(json: [JsonDictionary]) -> [Article] {
+        return json.map { Article(json: $0) }
     }
     
-    static func getDefault() -> Artical {
+    static func getDefault() -> Article {
         let data: JsonDictionary = ["source": [
             "id": nil,
             "name": "Firstpost.com"
@@ -91,7 +67,7 @@ struct Artical: Hashable {
         "content": "Mumbai: Credit growth is unlikely to pick up despite the three successive rate cuts by the central bank due to the capital constraints at banks and the deepening crisis in the non-banking lenders sector, warns a report.\r\nThe Reserve Bank had cut its key polic… [+2920 chars]"
         ]
         
-        return Artical(json: data)
+        return Article(json: data)
     }
 }
 

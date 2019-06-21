@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct NewsRowV : View {
-    let artical: Artical
+    let article: Article
     
     var body: some View {
         
@@ -19,9 +19,9 @@ struct NewsRowV : View {
                 .scaledToFit()
                 .clipped()
             VStack(alignment: .leading) {
-                Text(artical.title)
+                Text(article.title)
                     .font(.headline)
-                    Text(artical.description)
+                    Text(article.description)
                         .font(.subheadline)
                 }
             }
@@ -31,7 +31,7 @@ struct NewsRowV : View {
 #if DEBUG
 struct NewsRowV_Previews : PreviewProvider {
     static var previews: some View {
-        NewsRowV(artical: Artical.getDefault())
+        NewsRowV(article: Article.getDefault())
     }
 }
 #endif

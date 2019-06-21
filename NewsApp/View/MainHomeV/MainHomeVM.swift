@@ -11,7 +11,7 @@ import Combine
 
 class MainHomeVM: BindableObject {
     
-    var articals: [Artical] = [] {
+    var articals: [Article] = [] {
         didSet {
             didChange.send(self)
         }
